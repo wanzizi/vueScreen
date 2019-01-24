@@ -38,7 +38,9 @@ npm run test:unit
 - App.vue：vue入口组件
 - main.js：入口js文件
 
-
+### 配置文件说明
+项目使用了webpack v4.0+，webpack的配置在vue.config.js中。
+gulp等相关配置在gulpfile.js和config.upload.js中。
 
 ### 项目说明：
 
