@@ -24,3 +24,20 @@ npm run lint
 ```
 npm run test:unit
 ```
+
+
+src下项目结构
+
+- assets：需要打包压缩的静态资源文件，img，video等
+- components：组件集合
+- font：存放字体文件
+- mixins：mixins文件集合
+- plugins：插件集合，包含了通用ajax，通用配置，字典方法集合，过滤器，日期格式化工具，全局注册文件，小工具方法集合等文件
+- router：路由文件集合，index为入口文件
+- styles：样式文件集合
+- views：页面集合
+- App.vue：vue入口组件
+- main.js：入口js文件
+
+
+
