@@ -88,8 +88,15 @@ module.exports = {
     hotOnly: false,
     // 查阅 https://github.com/vuejs/vue-doc-zh-cn/vue-cli/cli-service.md#配置代理
     proxy: {
-      '/api': {
-        target: 'http://192.168.0.69:18017',
+      // '/api': {
+      //   target: 'http://192.168.0.69:18017',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/': ''
+      //   }
+      // },
+      '/api/management/project': {
+        target: 'http://47.111.0.217:18080',
         changeOrigin: true,
         pathRewrite: {
           '^/': ''

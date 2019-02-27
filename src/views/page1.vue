@@ -1,5 +1,5 @@
 <template>
-    <common-frame :list="list" :size="this.size" :bg="bgUrl">
+    <common-frame :list="list">
       <div
         class="common-module-set"
         slot-scope="slotProps"

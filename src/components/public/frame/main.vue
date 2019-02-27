@@ -22,22 +22,9 @@
 </template>
 
 <script>
-export default{
+export default {
   name: 'commonFrame',
   props: {
-    bg: {
-      type: String,
-      default: ''
-    },
-    size: {
-      type: Object,
-      default () {
-        return {
-          row: 0,
-          col: 0
-        }
-      }
-    },
     list: {
       type: Array,
       default () {
@@ -49,7 +36,12 @@ export default{
     return {
       dev: process.env.NODE_ENV === 'development',
       width: 0,
-      height: 0
+      height: 0,
+      bg: (this.$base.generalConfig && this.$base.generalConfig.backgroundImage) || '',
+      size: {
+        row: (this.$base.generalConfig && this.$base.generalConfig.height) || 0,
+        col: (this.$base.generalConfig && this.$base.generalConfig.width) || 0
+      }
     }
   },
   computed: {
