@@ -11,21 +11,22 @@
 <script>
 import mixins from 'Mixins/config.js'
 
-import header from 'Components/commonModules/header.vue'
+import header from 'Components/commonModules/public/header.vue'
 // import chartModule1 from 'Components/jingning/page2/chartModule1.vue'
 
 export default {
   mixins: [mixins],
   data () {
     return {
+      baseConfig: this.$base.generalConfig.children[1],
       list: [
         {
           name: 'my-header',
           size: {
-            width: 3200,
-            height: 80,
+            width: 1920,
+            height: 100,
             left: 0,
-            top: 0
+            top: 20
           }
         }
       ]
@@ -33,6 +34,9 @@ export default {
   },
   components: {
     'my-header': header
+  },
+  mounted () {
+    console.log(this.baseConfig)
   }
 }
 </script>

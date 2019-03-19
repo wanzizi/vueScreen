@@ -20,6 +20,7 @@ Ajax({
   }
 }).then(result => {
   Vue.prototype.$base.generalConfig = result.data || {}
+  Vue.prototype.$base.generalConfig.backgroundImage = process.env.NODE_ENV === 'development' ? result.data.website + result.data.backgroundImage : result.data.backgroundImage
 
   new Vue({
     router,
