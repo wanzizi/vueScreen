@@ -85,13 +85,15 @@ export default {
   },
   methods: {
     init () {
-      this.list = this.$base.menu.map((t, i) => {
-        if (t.link === this.$route.path) {
+      this.list = this.$base.generalConfig.children.map((t, i) => {
+        if (t.code === this.$route.name) {
           this.activeIndex = i
-          this.activeName = t.name
+          this.activeName = t.title
         }
         return {
           ...t,
+          link: `/${t.code.toLocaleLowerCase()}`,
+          thumbnail: require(`Assets/menu/${t.code}.png`),
           thisIndex: i
         }
       })

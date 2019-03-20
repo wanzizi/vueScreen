@@ -4,39 +4,32 @@
         class="common-module-set"
         slot-scope="slotProps"
         :is="slotProps.propName"
+        :data="baseConfig.children"
       ></div>
   </common-frame>
 </template>
 
 <script>
 import mixins from 'Mixins/config.js'
+import initModule from 'Mixins/initModule.js'
 
-import header from 'Components/commonModules/public/header.vue'
+import TITLE from 'Components/commonModules/traffic/titleModule1.vue'
 // import chartModule1 from 'Components/jingning/page2/chartModule1.vue'
 
 export default {
-  mixins: [mixins],
+  mixins: [mixins, initModule],
   data () {
     return {
       baseConfig: this.$base.generalConfig.children[1],
-      list: [
-        {
-          name: 'my-header',
-          size: {
-            width: 1920,
-            height: 100,
-            left: 0,
-            top: 20
-          }
-        }
-      ]
+      list: []
     }
   },
   components: {
-    'my-header': header
+    TITLE
   },
   mounted () {
-    console.log(this.baseConfig)
+  },
+  methods: {
   }
 }
 </script>

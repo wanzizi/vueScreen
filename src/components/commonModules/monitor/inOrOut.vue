@@ -38,15 +38,43 @@ export default {
         legend: {
           data: ['销量']
         },
+        grid: {
+          bottom: 40
+        },
         xAxis: {
+          axisLine: {
+            lineStyle: {
+              color: '#808080'
+            }
+          },
+          splitLine: {
+            show: true,
+            lineStyle: {
+              color: '#808080'
+            }
+          },
+          axisTick: { show: false },
           data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
         },
-        yAxis: {},
+        yAxis: {
+          axisLine: {
+            lineStyle: {
+              color: '#808080'
+            }
+          },
+          splitLine: {
+            // show: true ,
+            lineStyle: {
+              color: '#808080'
+            }
+          },
+          axisTick: { show: false }
+        },
         series: [{
           name: '销量',
           type: 'bar',
           itemStyle: {
-            color: color[1]
+            color: color[0]
           },
           data: [5, 20, 36, 10, 10, 20]
         }]

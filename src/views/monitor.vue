@@ -11,15 +11,14 @@
 
 <script>
 import mixins from 'Mixins/config.js'
+import initModule from 'Mixins/initModule.js'
 
-import header from 'Components/commonModules/public/header.vue'
 import INOROUT from 'Components/commonModules/monitor/inOrOut.vue'
 import INCOUNTY from 'Components/commonModules/monitor/inCounty.vue'
 
 export default {
-  mixins: [mixins],
+  mixins: [mixins, initModule],
   components: {
-    'my-header': header,
     INOROUT,
     INCOUNTY
   },
@@ -30,33 +29,8 @@ export default {
     }
   },
   mounted () {
-    this.init()
   },
   methods: {
-    init () {
-      this.baseConfig.children.forEach(t => {
-        this.list.push(
-          {
-            name: t.code,
-            size: {
-              width: t.width,
-              height: t.height,
-              left: t.positionLeft,
-              top: t.positionTop
-            }
-          }
-        )
-      })
-      this.list.unshift({
-        name: 'my-header',
-        size: {
-          width: 1920,
-          height: 100,
-          left: 0,
-          top: 10
-        }
-      })
-    }
   }
 }
 </script>
