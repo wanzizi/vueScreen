@@ -23,9 +23,11 @@ export default {
 
 <style lang="less" scoped>
 @timeSplit:2s;
-.circle-card-bg{
+
+.circle-card-bg {
   position: relative;
-  .circle{
+
+  .circle {
     position: absolute;
     top: -11px;
     left: -45px;
@@ -34,11 +36,13 @@ export default {
     border-radius: 50%;
     overflow: hidden;
     background: url('~Assets/card/outside.png') no-repeat;
-    .outside{
+
+    .outside {
       display: inline-block;
       width: 100%;
       height: 100%;
-      &:before{
+
+      &::before {
         content: '';
         display: inline-block;
         width: 100%;
@@ -47,18 +51,20 @@ export default {
         animation: forwardRotation @timeSplit ease 0.5s;
       }
     }
-    .middle{
+
+    .middle {
       position: absolute;
       top: 12px;
       left: 12px;
       width: 86px;
       height: 86px;
       background: url('~Assets/card/inner.png') no-repeat;
-      &:before{
+
+      &::before {
         content: '';
         position: relative;
-        top: 0px;
-        left: 0px;
+        top: 0;
+        left: 0;
         display: inline-block;
         width: 100%;
         height: 100%;
@@ -66,14 +72,16 @@ export default {
         animation: reverseRotation @timeSplit ease 0.5s;
       }
     }
-    .inner{
+
+    .inner {
       position: absolute;
       top: 21px;
       left: 21px;
       width: 68px;
       height: 68px;
-      text-align:center;
-      &:before{
+      text-align: center;
+
+      &::before {
         content: '';
         display: inline-block;
         width: 100%;
@@ -81,12 +89,14 @@ export default {
         background: url('~Assets/card/inner_bot.png') no-repeat;
         animation: forwardRotation @timeSplit ease 0.5s;
       }
-      .circle-img{
+
+      .circle-img {
         position: relative;
         top: -55px;
         display: inline-block;
       }
-      .table{
+
+      .table {
         position: absolute;
         top: 27px;
         left: -5px;
@@ -97,7 +107,8 @@ export default {
       }
     }
   }
-  &:before{
+
+  &::before {
     content: '';
     z-index: -1;
     position: absolute;
@@ -109,72 +120,81 @@ export default {
   }
 }
 
-@keyframes forwardRotation{
+@keyframes forwardRotation {
   from {
     transform: rotate(0);
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-@-moz-keyframes forwardRotation /* Firefox */
-{
-  from {
-    transform: rotate(0);
-  }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-@-webkit-keyframes forwardRotation /* Safari 和 Chrome */
-{
+@-moz-keyframes forwardRotation {
   from {
     transform: rotate(0);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-@-o-keyframes forwardRotation /* Opera */
-{
+@-webkit-keyframes forwardRotation {
   from {
     transform: rotate(0);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes reverseRotation{
+@-o-keyframes forwardRotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverseRotation {
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0);
   }
 }
-@-moz-keyframes reverseRotation{
+
+@-moz-keyframes reverseRotation {
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0);
   }
 }
-@-webkit-keyframes reverseRotation{
+
+@-webkit-keyframes reverseRotation {
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0);
   }
 }
-@-o-keyframes reverseRotation{
+
+@-o-keyframes reverseRotation {
   from {
     transform: rotate(360deg);
   }
+
   to {
     transform: rotate(0);
   }

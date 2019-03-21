@@ -1,61 +1,75 @@
 // 带圆环的卡片模块通用内容样式
-.common-circle-card-bg{
-    padding: 25px 0 15px 90px;
-    h4{
-        color: #fff;
-        font-size: 16px;
-        font-weight: normal;
-        margin-bottom: 17px;
+.common-circle-card-bg {
+  padding: 25px 0 15px 90px;
+
+  h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 17px;
+  }
+
+  .number-bar {
+    margin-left: 10px;
+
+    .number-box {
+      margin-right: 50px;
+
+      &.in::before {
+        content: '入园';
+        border: 1px solid #00ffe4;
+      }
+
+      &.out::before {
+        content: '出园';
+        border: 1px solid #ffb400;
+      }
+
+      &::before {
+        position: relative;
+        right: 10px;
+        display: inline-block;
+        padding: 2px;
+        writing-mode: vertical-rl;
+      }
+
+      &.in {
+        color: #00ffe4;
+      }
+
+      &.out {
+        color: #ffb400;
+      }
     }
-    .number-bar{
-        margin-left: 10px;
-        .number-box{
-            margin-right: 50px;
-            &.in:before{
-                content:'入园';
-                border: 1px solid #00ffe4;
-            }
-            &.out:before{
-                content:'出园';
-                border: 1px solid #ffb400;
-            }
-            &:before{
-                position: relative;
-                right: 10px;
-                display: inline-block;
-                padding: 2px;
-                writing-mode: vertical-rl;
-            }
-            &.in{
-                color: #00ffe4;
-            }
-            &.out{
-                color: #ffb400;
-            }
-        }
-        .date-box{
-            &.mouth:after{
-                content:'月';
-            }
-            &.day:after{
-                content:'日';
-            }
-            &:after{
-                position: relative;
-                display: inline-block;
-                padding: 2px;
-                writing-mode: vertical-rl;
-            }
-            &.mouth{
-                color: #00ffe4;
-            }
-            &.day{
-                color: #00ffe4;
-            }
-        }
+
+    .date-box {
+      &.mouth::after {
+        content: '月';
+      }
+
+      &.day::after {
+        content: '日';
+      }
+
+      &::after {
+        position: relative;
+        display: inline-block;
+        padding: 2px;
+        writing-mode: vertical-rl;
+      }
+
+      &.mouth {
+        color: #00ffe4;
+      }
+
+      &.day {
+        color: #00ffe4;
+      }
     }
-    .number{
-        font-family: AgencyFB;
-        font-size: 54px;
-    }
+  }
+
+  .number {
+    font-family: AgencyFB;
+    font-size: 54px;
+  }
 }

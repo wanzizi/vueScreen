@@ -66,40 +66,45 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.header{
+.header {
   padding-top: 8px;
   height: 115px;
   position: relative;
-  .time{
+
+  .time {
     position: absolute;
-    top:16px;
-    left:60px;
+    top: 16px;
+    left: 60px;
     font-size: 18px;
     line-height: 18px;
     color: #08c4d5;
   }
-  .title-box{
+
+  .title-box {
     width: 100%;
     height: 93px;
     background: url('~Assets/top_bg.png') center no-repeat;
     text-align: center;
-     color: #08c4d5;
-    h1{
-      padding-top:20px;
+    color: #08c4d5;
+
+    h1 {
+      padding-top: 20px;
       font-size: 24px;
       line-height: 24px;
       font-weight: normal;
     }
-    .menu{
+
+    .menu {
       font-size: 18px;
       line-height: 18px;
       margin-top: 14px;
     }
   }
-  .weather{
+
+  .weather {
     position: absolute;
-    top:16px;
-    right:60px;
+    top: 16px;
+    right: 60px;
     font-size: 18px;
     line-height: 18px;
     color: #08c4d5;

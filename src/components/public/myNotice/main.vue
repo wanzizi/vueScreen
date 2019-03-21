@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.common-notice-box{
+.common-notice-box {
   z-index: 1078;
   position: fixed;
   top: 25px;

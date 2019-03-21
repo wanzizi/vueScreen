@@ -43,7 +43,8 @@ export default {
 
 <style lang="less" scoped>
 @import '~Styles/circleCardBg.less';
-.circle-img{
+
+.circle-img {
   position: relative;
   top: 10px;
   display: inline-block;
@@ -51,10 +52,11 @@ export default {
   height: 29px;
   background: url('~Assets/icon/multi_people.png') no-repeat;
 }
-.card-content{
-  .number{
+
+.card-content {
+  .number {
     font-size: 54px;
-    line-height:  54px;
+    line-height: 54px;
     color: #00ffe4;
   }
 }

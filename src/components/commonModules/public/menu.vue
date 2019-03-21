@@ -113,121 +113,139 @@ export default {
 
 <style lang="less" scoped>
 .bounce-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
+
 .bounce-leave-active {
-  transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
+
 .bounce-enter,
-.bounce-leave-to{
-    transform: translateX(10px);
-    opacity: 0;
+.bounce-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
 }
-.dynamic-menu{
-    width: 640px;
-    margin: 16px auto;
-    .active{
-        font-size: 18px;
-        color: #00ff2a;
+
+.dynamic-menu {
+  width: 640px;
+  margin: 16px auto;
+
+  .active {
+    font-size: 18px;
+    color: #00ff2a;
+    line-height: 1;
+    font-weight: bold;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: relative;
+      top: -1.5px;
+      right: 10px;
+      width: 15px;
+      height: 15px;
+      line-height: 18px;
+      display: inline-block;
+      vertical-align: bottom;
+      background: url('~Assets/menu/active.png') no-repeat;
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 35px;
+    right: 200px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    background: url('~Assets/menu/x.png') no-repeat;
+  }
+
+  .content {
+    position: absolute;
+    z-index: 99;
+    top: 118px;
+    left: 50%;
+    margin-left: -700px;
+    width: 1400px;
+    height: 318px;
+    background: url('~Assets/menu/bg1.png') no-repeat;
+    overflow: hidden;
+
+    .index-box {
+      position: absolute;
+      top: 31px;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      color: #00ff2a;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      position: relative;
+      top: 68px;
+      margin: 0 auto;
+      width: 1198px;
+      height: 238px;
+      background: url('~Assets/menu/circle1.png') no-repeat;
+    }
+
+    .arrow {
+      position: absolute;
+      z-index: 9;
+      top: 143px;
+      width: 43px;
+      height: 35px;
+      cursor: pointer;
+    }
+
+    .left {
+      left: 160px;
+      background: url('~Assets/menu/pre.png') no-repeat;
+    }
+
+    .right {
+      right: 160px;
+      background: url('~Assets/menu/next.png') no-repeat;
+    }
+
+    .list {
+      position: relative;
+      top: 65px;
+      width: max-content;
+      list-style: none;
+
+      .item {
+        position: absolute;
+        list-style: none;
+        transition: all 1s ease;
         line-height: 1;
-        font-weight: bold;
-        cursor: pointer;
-        &:before{
-            content: '';
-            position: relative;
-            top: -1.5px;
-            right: 10px;
-            width: 15px;
-            height: 15px;
-            line-height: 18px;
-            display: inline-block;
-            vertical-align: bottom;
-            background: url('~Assets/menu/active.png')no-repeat;
-        }
-    }
-    .close{
-        position: absolute;
-        top: 35px;
-        right: 200px;
-        display: inline-block;
-        width: 13px;
-        height: 13px;
-        cursor: pointer;
-        background: url('~Assets/menu/x.png') no-repeat;
-    }
-    .content{
-        position: absolute;
-        z-index: 99;
-        top: 118px;
-        left: 50%;
-        margin-left: -700px;
-        width: 1400px;
-        height: 318px;
-        background: url('~Assets/menu/bg1.png') no-repeat;
-        overflow: hidden;
-        .index-box{
-          position: absolute;
-          top: 31px;
-          width: 100%;
-          text-align: center;
-          font-size: 18px;
-          color: #00ff2a;
-        }
-        &:after{
-            content: '';
-            display: inline-block;
-            position: relative;
-            top: 68px;
-            margin: 0 auto;
-            width: 1198px;
-            height: 238px;
-            background: url('~Assets/menu/circle1.png') no-repeat;
-        }
-        .arrow{
-            position: absolute;
-            z-index: 9;
-            top: 143px;
-            width: 43px;
-            height: 35px;
-            cursor: pointer;
-        }
-        .left{
-            left: 160px;
-            background: url('~Assets/menu/pre.png') no-repeat;
-        }
-        .right{
-            right: 160px;
-            background: url('~Assets/menu/next.png') no-repeat;
-        }
-        .list{
-            position: relative;
-            top: 65px;
-            width: max-content;
-            list-style: none;
-            .item{
-                position: absolute;
-                list-style: none;
-                transition: all 1s ease;
-                line-height: 1;
-                .item-inner{
-                    display: block;
-                    text-decoration: none;
-                    img{
-                        width: 100%;
-                    }
-                    .name{
-                        display: block;
-                        line-height: 2.3;
-                        font-size: 18px;
-                        font-weight: bold;
-                        color: #046e62;
-                        &.highlight{
-                            color: #00ff2a;
-                        }
-                    }
-                }
+
+        .item-inner {
+          display: block;
+          text-decoration: none;
+
+          img {
+            width: 100%;
+          }
+
+          .name {
+            display: block;
+            line-height: 2.3;
+            font-size: 18px;
+            font-weight: bold;
+            color: #046e62;
+
+            &.highlight {
+              color: #00ff2a;
             }
+          }
         }
+      }
     }
+  }
 }
 </style>

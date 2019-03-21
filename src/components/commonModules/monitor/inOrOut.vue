@@ -84,7 +84,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.chart{
+.chart {
   width: 100%;
   height: 335px;
 }

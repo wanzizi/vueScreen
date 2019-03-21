@@ -90,10 +90,11 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.common-frame{
+.common-frame {
   position: relative;
   overflow: hidden;
-  .module{
+
+  .module {
     position: absolute;
   }
 }

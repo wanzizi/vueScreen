@@ -70,52 +70,59 @@ export default {
 
 <style lang="less" scoped>
 .move-notice-enter-active {
-  animation: move-notice .5s ease;
+  animation: move-notice 0.5s ease;
 }
+
 .move-notice-leave-active {
-  transition: all 1s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 1s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.move-notice-enter, .move-notice-leave-to{
+
+.move-notice-enter,
+.move-notice-leave-to {
   transform: translateX(30px);
   opacity: 0;
 }
 
 @keyframes move-notice {
   0% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
+
   50% {
     transform: translateX(-60px);
   }
+
   100% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 
-.single-notice-modal{
+.single-notice-modal {
   position: relative;
   padding: 14px 25px 10px 16px;
   border-radius: 4px;
-  box-shadow: 0 1px 6px rgba(0,0,0,.2);
-  background: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.8);
   line-height: 1;
-  position: relative;
   overflow: hidden;
   border-left: 4px solid #2d8cf0;
   margin-bottom: 15px;
-  .close{
+
+  .close {
     position: absolute;
     top: 7px;
     right: 7px;
     font-size: 20px;
-    &:after{
+
+    &::after {
       display: inline-block;
       content: '\00d7';
       cursor: pointer;
     }
   }
-  .body{
-    .title{
+
+  .body {
+    .title {
       font-size: 14px;
       color: #17233d;
       padding-right: 10px;
@@ -124,7 +131,8 @@ export default {
       white-space: nowrap;
       margin-bottom: 4px;
     }
-    .content{
+
+    .content {
       font-size: 12px;
       color: #515a6e;
       text-align: justify;
