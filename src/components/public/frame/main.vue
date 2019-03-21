@@ -16,7 +16,7 @@
               top:height*t.size.top/size.row-(dev?0:t.size.height*(1-scaleY)/2)+'px'
           }"
       >
-        <slot :propName="t.name" :propStatus="t.isMount"></slot>
+        <slot :propName="t.name" :propStatus="t.isMount" :propData="t.data"></slot>
       </div>
     </div>
 </template>

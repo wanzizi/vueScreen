@@ -4,7 +4,7 @@
         class="common-module-set"
         slot-scope="slotProps"
         :is="slotProps.propName"
-        :data="baseConfig.children"
+        :data="slotProps.propData"
       ></div>
   </common-frame>
 </template>
@@ -24,7 +24,7 @@ export default {
   },
   data () {
     return {
-      baseConfig: this.$base.generalConfig.children[0],
+      baseConfig: this.$base.generalConfig.children[0].children,
       list: []
     }
   },

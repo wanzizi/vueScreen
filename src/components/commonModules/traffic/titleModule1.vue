@@ -16,7 +16,7 @@ export default {
   data () {
     return {
       num: '',
-      title: '2222'
+      title: ''
     }
   },
   components: { circleCardBg },

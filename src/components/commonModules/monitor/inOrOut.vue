@@ -1,9 +1,7 @@
 <template>
-    <div>
-      <left-title-bg :title="data[0].title">
-        <div class="chart" id="chartOne"></div>
-      </left-title-bg>
-    </div>
+    <left-title-bg :title="data.title">
+      <div class="chart" id="chartOne"></div>
+    </left-title-bg>
 </template>
 
 <script>
@@ -14,9 +12,9 @@ export default {
   components: { leftTitleBg },
   props: {
     data: {
-      type: Array,
+      type: Object,
       default () {
-        return []
+        return {}
       }
     }
   },
@@ -28,7 +26,7 @@ export default {
   },
   methods: {
     initChart () {
-      let color = JSON.parse(this.data[0].colors)
+      let color = JSON.parse(this.data.colors)
       let myChart = ehcarts.init(document.getElementById('chartOne'))
       let opt = {
         title: {

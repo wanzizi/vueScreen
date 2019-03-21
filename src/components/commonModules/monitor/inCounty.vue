@@ -1,11 +1,9 @@
 <template>
-    <div>
-      <top-left-bg :title="data[1].title">
-        <div class="content">
-            <span style="color:#fff;">Content</span>
-        </div>
-      </top-left-bg>
-    </div>
+    <top-left-bg :title="data.title">
+      <div class="content">
+          <span style="color:#fff;">{{data}}</span>
+      </div>
+    </top-left-bg>
 </template>
 
 <script>
@@ -16,9 +14,9 @@ export default {
   components: { topLeftBg },
   props: {
     data: {
-      type: Array,
+      type: Object,
       default () {
-        return []
+        return {}
       }
     }
   },

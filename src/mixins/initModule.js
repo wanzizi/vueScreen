@@ -9,7 +9,7 @@ export default {
   },
   methods: {
     init () {
-      this.baseConfig.children.forEach(t => {
+      this.baseConfig.forEach(t => {
         this.list.push(
           {
             name: t.code,
@@ -18,7 +18,8 @@ export default {
               height: t.height,
               left: t.positionLeft,
               top: t.positionTop
-            }
+            },
+            data: t
           }
         )
       })

@@ -4,7 +4,7 @@
         class="common-module-set"
         slot-scope="slotProps"
         :is="slotProps.propName"
-        :data="baseConfig.children"
+        :data="slotProps.propData"
       ></div>
   </common-frame>
 </template>
@@ -20,7 +20,7 @@ export default {
   mixins: [mixins, initModule],
   data () {
     return {
-      baseConfig: this.$base.generalConfig.children[1],
+      baseConfig: this.$base.generalConfig.children[1].children,
       list: []
     }
   },
