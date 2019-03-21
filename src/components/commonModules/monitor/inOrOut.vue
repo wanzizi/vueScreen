@@ -72,7 +72,7 @@ export default {
           name: '销量',
           type: 'bar',
           itemStyle: {
-            color: color[0]
+            color: color[1]
           },
           data: [5, 20, 36, 10, 10, 20]
         }]

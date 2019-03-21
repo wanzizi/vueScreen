@@ -1,9 +1,8 @@
 <template>
     <circleCardBg>
       <span class="circle-img" slot="cirleImg"></span>
-
       <div class="card-content common-circle-card-bg">
-        <h4>{{title}}</h4>
+        <h4>{{data.title}}</h4>
         <p class="number">{{num|changeToEnglishFormat}}</p>
       </div>
     </circleCardBg>
@@ -11,18 +10,23 @@
 
 <script>
 import circleCardBg from '../public/circleCardBg.vue'
-// import { getLastMonth } from 'Plugins/util.js'
 export default {
+  props: {
+    data: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
+  },
   data () {
     return {
-      num: '',
-      title: ''
+      num: ''
     }
   },
   components: { circleCardBg },
   async mounted () {
     // this.queryData()
-    // this.title = `${await getLastMonth(this)}月累计客流量（人次）`
   },
   methods: {
     queryData () {
@@ -38,7 +42,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-// @import '~@/style/circleCardBg.less';
+@import '~Styles/circleCardBg.less';
 .circle-img{
   position: relative;
   top: 10px;

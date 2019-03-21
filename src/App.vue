@@ -5,6 +5,8 @@
 </template>
 
 <style lang="less">
+@import 'Styles/font.less';
+
 *{
   box-sizing: border-box;
   margin: 0;
