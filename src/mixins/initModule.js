@@ -23,7 +23,7 @@ export default {
           }
         )
       })
-      this.list.unshift({
+      this.list.push({
         name: 'my-header',
         size: {
           width: 1920,
